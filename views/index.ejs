@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevToolBox Pro - Developer Toolbox Online</title>
+<meta name="description" content="Free online developer tools: JSON formatter, Base64, URL encoder, UUID generator, CSV converter, timestamp tool and more.">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <a href="/" class="logo"><span class="logo-icon">&#9670;</span> DevToolBox <span class="logo-pro">Pro</span></a>
+    <div class="top-links">
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+    </div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="container">
+    <h1><span class="gradient-text">15+ Developer Tools</span></h1>
+    <p class="hero-sub">JSON formatting, Base64, UUID generation, CSV conversion, HTML escaping, and more — all in one place. Fast, free, works in your browser.</p>
+    <div class="cta-row">
+      <a href="#tools" class="btn btn-primary">Try Free Tools</a>
+      <a href="#pricing" class="btn btn-outline">Upgrade to Pro</a>
+    </div>
+    <div class="stats-bar">
+      <span>Free tier: limited usage</span>
+      <span>Pro: <strong>199 RMB</strong></span>
+      <span>Enterprise: <strong>499 RMB</strong></span>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="tools">
+  <h2 class="section-title">Dev Tools</h2>
+  <div class="tool-grid">
+    <% tools.forEach(function(t) { %>
+    <div class="tool-card" onclick="openTool('<%= t.id %>')">
+      <div class="tool-card-name"><%= t.name %></div>
+      <div class="tool-card-desc"><%= t.desc %></div>
+    </div>
+    <% }); %>
+  </div>
+</div>
+
+<div class="tool-workspace" id="workspace" style="display:none">
+  <div class="container">
+    <div class="tool-header">
+      <h3 id="toolTitle">Tool</h3>
+      <div>
+        <button class="btn btn-sm btn-secondary" onclick="closeWorkspace()">&#10005; Close</button>
+      </div>
+    </div>
+    <div class="tool-main">
+      <div class="tool-panel">
+        <div class="panel-label">Input</div>
+        <textarea id="inputBox" placeholder="Enter your input here..."></textarea>
+      </div>
+      <div class="tool-panel">
+        <div class="panel-label">
+          Output
+          <span class="pro-badge-small" id="proNote" style="display:none">Pro feature</span>
+        </div>
+        <div class="output-toolbar">
+          <button class="btn btn-primary" onclick="processTool()">Process</button>
+          <button class="btn btn-warning" onclick="clearTool()">Clear</button>
+          <button class="btn btn-success" onclick="copyResult()">Copy</button>
+        </div>
+        <textarea id="outputBox" readonly class="output-area" placeholder="Result will appear here..."></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pricing-section" id="pricing">
+  <div class="container">
+    <h2 class="section-title">Pricing</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Free</h3>
+        <div class="price">0</div>
+        <ul>
+          <li>&#10003; All basic tools</li>
+          <li>&#10003; Limited usage</li>
+          <li>&#10007; No API access</li>
+          <li>&#10007; No priority support</li>
+        </ul>
+        <a href="#tools" class="btn btn-outline">Get Started</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="badge">Popular</div>
+        <h3>Pro</h3>
+        <div class="price">199</div>
+        <ul>
+          <li>&#10003; All tools unlimited</li>
+          <li>&#10003; API access</li>
+          <li>&#10003; Priority support</li>
+          <li>&#10003; Lifetime updates</li>
+        </ul>
+        <button class="btn btn-primary" onclick="purchasePro()">Buy Pro</button>
+      </div>
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <div class="price">499</div>
+        <ul>
+          <li>&#10003; Everything in Pro</li>
+          <li>&#10003; Source code included</li>
+          <li>&#10003; Self-hosted deployment</li>
+          <li>&#10003; Commercial license</li>
+        </ul>
+        <button class="btn btn-primary" onclick="purchaseEnterprise()">Contact Sales</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about-section" id="about">
+  <div class="container">
+    <h2 class="section-title">About</h2>
+    <p>DevToolBox Pro provides essential developer utilities in one place. Every tool runs entirely in your browser or on our server — your data never leaves your control.</p>
+    <p>Built for developers who value efficiency. Contact: cao63571@gmail.com</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 DevToolBox Pro. Payment: Alipay (cao63571@gmail.com)</p>
+  </div>
+</footer>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
