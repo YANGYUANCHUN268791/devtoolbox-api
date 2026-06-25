@@ -1,0 +1,72 @@
+﻿*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0b0e17;color:#e2e8f0;line-height:1.6}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* Top Bar */
+.top-bar{background:#111827;border-bottom:1px solid #1e293b;padding:12px 0}
+.top-bar-inner{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:20px;font-weight:700;color:#e2e8f0;text-decoration:none}
+.logo-icon{color:#38bdf8;margin-right:4px}
+.logo-pro{background:linear-gradient(90deg,#38bdf8,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:13px}
+.top-links a{color:#94a3b8;margin-left:20px;text-decoration:none;font-size:14px}
+.top-links a:hover{color:#38bdf8}
+
+/* Hero */
+.hero{text-align:center;padding:60px 0;background:linear-gradient(180deg,#0f172a,#0b0e17)}
+.hero h1{font-size:40px;font-weight:800;margin-bottom:16px}
+.gradient-text{background:linear-gradient(90deg,#38bdf8,#818cf8,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:16px;color:#94a3b8;max-width:600px;margin:0 auto 24px}
+.cta-row{display:flex;gap:12px;justify-content:center;margin-bottom:20px}
+.btn{display:inline-block;padding:10px 24px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;cursor:pointer;border:none;transition:all .2s}
+.btn-primary{background:linear-gradient(90deg,#2563eb,#7c3aed);color:#fff}
+.btn-primary:hover{opacity:.9;transform:translateY(-1px)}
+.btn-outline{background:transparent;border:1px solid #475569;color:#cbd5e1}
+.btn-outline:hover{border-color:#38bdf8;color:#38bdf8}
+.btn-warning{background:#d97706;color:#fff}
+.btn-success{background:#059669;color:#fff}
+.btn-secondary{background:#475569;color:#fff}
+.btn-sm{padding:6px 14px;font-size:12px}
+.stats-bar{display:flex;gap:24px;justify-content:center;font-size:13px;color:#64748b}
+.stats-bar strong{color:#e2e8f0}
+
+/* Tools Grid */
+.section-title{font-size:24px;font-weight:700;margin:40px 0 24px;text-align:center;color:#f1f5f9}
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:40px}
+.tool-card{background:#1e293b;border:1px solid #334155;border-radius:8px;padding:16px;cursor:pointer;transition:all .2s}
+.tool-card:hover{transform:translateY(-2px);border-color:#38bdf8;box-shadow:0 4px 12px rgba(56,189,248,.1)}
+.tool-card-name{font-weight:600;font-size:14px;margin-bottom:4px}
+.tool-card-desc{font-size:12px;color:#64748b}
+
+/* Workspace */
+.tool-workspace{background:#111827;border:1px solid #1e293b;border-radius:12px;margin:20px auto;max-width:1100px}
+.tool-header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid #1e293b}
+.tool-header h3{font-size:18px;font-weight:600}
+.tool-main{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:20px}
+.tool-panel{display:flex;flex-direction:column;gap:8px}
+.panel-label{font-size:13px;font-weight:600;color:#94a3b8}
+textarea{width:100%;min-height:250px;background:#0f172a;border:1px solid #334155;border-radius:6px;color:#e2e8f0;padding:10px;font-family:'Cascadia Code','Fira Code',monospace;font-size:13px;resize:vertical;outline:none}
+textarea:focus{border-color:#38bdf8}
+.output-area{background:#0a0e1a}
+.output-toolbar{display:flex;gap:6px}
+.pro-badge-small{font-size:11px;background:#d97706;color:#fff;padding:2px 8px;border-radius:10px;margin-left:8px}
+
+/* Pricing */
+.pricing-section{padding:40px 0}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:800px;margin:0 auto}
+.pricing-card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:24px;text-align:center}
+.pricing-card.featured{border-color:#38bdf8;position:relative}
+.pricing-card .badge{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#38bdf8;color:#0f172a;padding:2px 12px;border-radius:10px;font-size:11px;font-weight:700}
+.pricing-card h3{font-size:20px;margin-bottom:8px}
+.price{font-size:36px;font-weight:800;color:#38bdf8;margin:8px 0 16px}
+.pricing-card ul{list-style:none;margin-bottom:20px;text-align:left}
+.pricing-card ul li{padding:6px 0;font-size:14px;color:#94a3b8}
+.pricing-card .btn{width:100%}
+
+/* About */
+.about-section{text-align:center;padding:40px 0}
+.about-section p{color:#94a3b8;max-width:600px;margin:0 auto 12px;font-size:14px}
+
+/* Footer */
+.footer{text-align:center;padding:20px;color:#475569;font-size:12px;border-top:1px solid #1e293b}
+
+@media(max-width:768px){.hero h1{font-size:28px}.tool-main{grid-template-columns:1fr}.pricing-grid{grid-template-columns:1fr}}
